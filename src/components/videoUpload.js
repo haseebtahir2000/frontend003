@@ -116,7 +116,12 @@ const UploadPage = () => {
               cursor: 'pointer',
               transition: 'all 0.3s ease-in-out',
             }}
-            onFocus={{ boxShadow: '0 0 8px rgba(255, 64, 129, 0.8)' }}
+             onFocus={(e) => {
+              e.target.style.boxShadow = '0 0 8px rgba(255, 64, 129, 0.8)';
+            }}
+            onBlur={(e) => {
+              e.target.style.boxShadow = 'none';
+            }}
           />
         </Box>
         <TextField
